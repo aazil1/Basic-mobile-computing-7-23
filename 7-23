@@ -1,0 +1,199 @@
+import 'dart:io';
+
+// void main() {
+//     stdout.write("Write your name: ");
+//     String? input = stdin.readLineSync();
+
+//     print('Hello, $name');
+
+// -----------------------
+// void main() {
+//     stdout.write('Enter your name: ');
+//    String? input = stdin.readLineSync();
+
+//     if (name != null && name.isNotEmpty){
+//         print('Nice to meet you, $name');
+//     } else {
+//         print('You did not enter a valid name');
+//     }
+// }
+// -----------------------
+// void main() {
+//     stdout.write("Enter a String: ");
+//     String? input = stdin.readLineSync();
+
+//     if (input != null) {
+//         int number = int.parse(input);
+//         print('you entered: $number');
+//     } else {
+//         print('no input received');
+//     }
+//}
+// -----------------------
+// void main() {
+//     stdout.write('Enter your name: ');
+//     String? ageInput = stdin.readLineSync();
+
+//     stdout.write('Enter your age: ');
+//     String? nameInput = stdin.readLineSync();
+
+//     if(nameInput !=null) {
+//         String? name = int.tryParse(nameInput);
+//         if (name !=null){
+//             print('youre name is $name ');
+//         } else {
+//             print('invalid name');
+//         }
+//     } else {
+//         print('no input received');
+//     }
+
+//         if(ageInput !=null) {
+//         int? age = int.tryParse(ageInput);
+//         if (age !=null){
+//             print('you are $age years old');
+//         } else {
+//             print('invalid age, please enter a number');
+//         }
+//     } else {
+//         print('no input received');
+//     }
+// }
+// -----------------------
+// void main() {
+//     stdout.write('Enter a decimal number: ');
+//     String? input = stdin.readLineSync();
+
+//     if(input != null) {
+//         double? value = double.tryParse(input);
+//         if (value != null) {
+//             print('you entered: $value');
+//         } else {
+//             print('that was not a valid decimal number');
+//         }
+//     }
+// }
+// -----------------------
+// void main () {
+//     stdout.write('Enter a 1st number: ');
+//     String? aInput = stdin.readLineSync();
+
+//     stdout.write('Enter a 2nd number');
+//     String? bInput = stdin.readLineSync();
+
+//     if (aInput == null ||  bInput == null) {
+//         print('Missing input');
+//         return;
+//     }
+
+//     double? a = double.tryParse(aInput);
+//     double? b = double.tryParse(aInput);
+
+//     if (a == null ||  b == null) {
+//         print('Enter a valid number');
+//         return;
+//     }
+
+//     double sum = a + b;
+//     print('sum = $sum');
+// }
+// -----------------------
+// void main () {
+//     stdout.write('Enter a 1st number: ');
+//     double? a = double.tryParse(stdin.readLineSync() ?? '');
+
+//     stdout.write('Enter a 2nd number: ');
+//     double? b = double.tryParse(stdin.readLineSync() ?? '');
+
+//     if (a == null ||  b == null) {
+//         print('invalid number');
+//         return;
+//     }
+
+//     stdout.write('Choose an operator (+ , -, *, /): ');
+//     String? op = stdin.readLineSync();
+
+//     if (op == '+'){
+//         print('Result: ${a + b} ');
+//     } else if (op == '-'){
+//         print('Result: ${a - b} ');
+//     } else if (op == '*'){
+//         print('Result: ${a * b} ');
+//     } else if (op == '/'){
+//         if (b == 0) {
+//             print('Cannot devide by zero');
+//         } else {
+//             print('Result: ${a / b} ');
+//         }
+//     } else {
+//         print('unknown number');
+//     }
+// }
+// -----------------------
+// void main () {
+//     stdout.write('Enter your age');
+//     String? ageInput = stdin.readLineSync();
+
+//     int? age = int.tryParse(ageInput ?? ' '):
+
+//     if (age == null){
+//         print('Please enter a valud number');
+//         return;
+//     }
+//     if ( age >=10 && age <= 120) {
+//         print('you are eligible to vote');
+//     } else if (age < 18 && age > 0) {
+//         print('you are not eligible to vote');
+//     } else {
+//         print('Age value is not realistic');
+//     }
+// }
+// -----------------------
+// void main () {
+//     stdout.write('Enter a string integer: ');
+//     double? value = double.tryParse(stdin.readLineSync() ?? ' ');
+
+//     if (value == null) {
+        
+//         print('invalid numbers');
+//         return;
+//     }
+
+//     value += 10;
+//     value *= 2;
+//     value /= 10;
+
+//     print('After operation, value = $value');
+// }
+
+
+
+// void main () {
+//     stdout.write('How many number will you enter: ');
+//     int? count = int.tryParse(stdin.readLineSync() ?? ' ');
+
+//     if (count == null || count <= 0) {
+//     print('invalid');
+//     return;
+//     }
+//     List<int> number = [];
+
+//     for (int i= 0; i < count; i ++) {
+//         stdout.write('Enter a number ${i + 1}: ');
+//         int? n = int.tryParse(stdin.readLineSync() ?? ' ');
+
+//         if( n == null) {
+//             print('invalid');
+//             n = 0;
+//         }
+//         number.add(n);
+//     }
+//     int sum = 0;
+//     for (int n in number) {
+//         sum += n;
+//     }
+
+//     double average = sum / number.length;
+//     print('Sum: $sum');
+//     print('Average: $average');
+// }
