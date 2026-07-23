@@ -1,0 +1,67 @@
+import 'dart:io';
+
+void main() {
+  bool running = true;
+
+  while (running) {
+    print('\n==== Simple Menu ====');
+    print('1. Greet User');
+    print('2. Add Two Numbers');
+    print('3. Exit');
+
+    stdout.write('Choose an option: ');
+    String? choice = stdin.readLineSync();
+
+    switch (choice) {
+      case '1':
+        greetUser();
+        break;
+
+      case '2':
+        addTwoNumbers();
+        break;
+
+      case '3':
+        running = false;
+        print('Goodbye!');
+        break;
+
+      default:
+        print('Invalid option.');
+    }
+  }
+}
+
+void greetUser() {
+  stdout.write('Enter your name: ');
+  String? name = stdin.readLineSync();
+    if (name == null) {
+    print('Please enter a name');
+    return;
+  }
+  print('\nHello, $name! Welcome to the Menu.');
+}
+
+void addTwoNumbers() {
+  stdout.write('Enter the 1st number: ');
+  String? aInput = stdin.readLineSync();
+
+  stdout.write('Enter the 2nd number: ');
+  String? bInput = stdin.readLineSync();
+
+  if (aInput == null || bInput == null) {
+    print('Missing input.');
+    return;
+  }
+
+  double? a = double.tryParse(aInput);
+  double? b = double.tryParse(bInput);
+
+  if (a == null || b == null) {
+    print('Please enter valid numbers.');
+    return;
+  }
+
+  double sum = a + b;
+  print('Sum = $sum');
+}
